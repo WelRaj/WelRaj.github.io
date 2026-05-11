@@ -25,7 +25,7 @@
     --accent:#6c63ff;
     --accent2:#00d4aa;
     --accent3:#ff6b6b;
-    --text:#e8e8f0;
+    --text:hsl(180, 100%, 100%);
     --text2:#9898b0;
     --text3:#5a5a72;
     --font:'Space Grotesk',sans-serif;
@@ -439,7 +439,7 @@
               <div class="contact-link-label">LeetCode</div>
             </div>
           </a>
-          <a href="+916263171958" class="contact-link">
+          <a href="+916263171058" class="contact-link">
             <div class="contact-link-icon">📱</div>
             <div>
               <div class="contact-link-text">+91 6263171958</div>
@@ -480,6 +480,40 @@
       e.preventDefault();
       document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'});
     });
+  });
+
+  const form = document.getElementById('contact-form');
+  const sendBtn = document.getElementById('send-btn');
+  const successMsg = document.getElementById('form-success');
+  const errorMsg = document.getElementById('form-error');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    sendBtn.textContent = 'Sending...';
+    sendBtn.disabled = true;
+    successMsg.style.display = 'none';
+    errorMsg.style.display = 'none';
+
+    const data = new FormData(form);
+    try {
+      const response = await fetch('https://formspree.io/f/mvzldkkv', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        successMsg.style.display = 'block';
+        form.reset();
+        sendBtn.textContent = 'Send Message';
+        sendBtn.disabled = false;
+      } else {
+        throw new Error('Failed');
+      }
+    } catch(err) {
+      errorMsg.style.display = 'block';
+      sendBtn.textContent = 'Send Message';
+      sendBtn.disabled = false;
+    }
   });
 </script>
 </body>
