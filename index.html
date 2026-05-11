@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rajkumar Rathor | Software Engineer Intern | ML & Web Developer</title>
+<meta name="description" content="Rajkumar Rathor — B.Tech CSE student at JUET Guna. Machine Learning Engineer and Web Developer. 350+ LeetCode problems. Seeking Software Engineer internship 2025-2026."/>
+<meta name="keywords" content="Rajkumar Rathor, Software Engineer Intern, Machine Learning, Python Developer, JUET Guna, Web Developer, LeetCode, NLP, Data Science"/>
+<meta name="author" content="Rajkumar Rathor"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="Rajkumar Rathor | Software Engineer"/>
+<meta property="og:description" content="ML Engineer & Web Developer. B.Tech CSE at JUET Guna. 350+ LeetCode. Open to internships."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://welraj.github.io"/>
+<link rel="canonical" href="https://welraj.github.io"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --bg:#0a0a0f;
+    --bg2:#111118;
+    --bg3:#1a1a24;
+    --card:#16161f;
+    --border:#2a2a3a;
+    --accent:#6c63ff;
+    --accent2:#00d4aa;
+    --accent3:#ff6b6b;
+    --text:#e8e8f0;
+    --text2:#9898b0;
+    --text3:#5a5a72;
+    --font:'Space Grotesk',sans-serif;
+    --mono:'JetBrains Mono',monospace;
+  }
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:16px;line-height:1.7;overflow-x:hidden;}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;}
+  .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;}
+  .nav-logo{font-family:var(--mono);font-size:15px;color:var(--accent);letter-spacing:0.05em;}
+  .nav-links{display:flex;gap:2rem;list-style:none;}
+  .nav-links a{color:var(--text2);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.2s;}
+  .nav-links a:hover{color:var(--accent);}
+
+  /* SECTIONS */
+  section{padding:100px 2rem;}
+  .container{max-width:1100px;margin:0 auto;}
+
+  /* HERO */
+  #hero{min-height:100vh;display:flex;align-items:center;padding-top:80px;position:relative;overflow:hidden;}
+  #hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(108,99,255,0.12) 0%,transparent 70%);pointer-events:none;}
+  #hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(0,212,170,0.08) 0%,transparent 70%);pointer-events:none;}
+  .hero-tag{font-family:var(--mono);font-size:13px;color:var(--accent2);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.2rem;display:flex;align-items:center;gap:8px;}
+  .hero-tag::before{content:'';width:32px;height:1px;background:var(--accent2);}
+  .hero-name{font-size:clamp(48px,8vw,80px);font-weight:700;line-height:1.05;letter-spacing:-0.03em;margin-bottom:1rem;}
+  .hero-name span{color:var(--accent);}
+  .hero-role{font-size:clamp(18px,3vw,24px);color:var(--text2);font-weight:400;margin-bottom:2rem;}
+  .hero-role b{color:var(--accent2);font-weight:500;}
+  .hero-desc{max-width:560px;color:var(--text2);font-size:16px;line-height:1.8;margin-bottom:2.5rem;}
+  .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+  .btn-primary{background:var(--accent);color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;transition:opacity 0.2s,transform 0.2s;}
+  .btn-primary:hover{opacity:0.85;transform:translateY(-1px);}
+  .btn-outline{border:1px solid var(--border);color:var(--text);padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:500;font-size:14px;transition:border-color 0.2s,color 0.2s;}
+  .btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+  .hero-stats{display:flex;gap:2.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);}
+  .stat-num{font-size:28px;font-weight:700;color:var(--text);}
+  .stat-label{font-size:13px;color:var(--text3);margin-top:2px;}
+
+  /* SECTION HEADER */
+  .section-tag{font-family:var(--mono);font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.8rem;}
+  .section-title{font-size:clamp(28px,4vw,38px);font-weight:700;letter-spacing:-0.02em;margin-bottom:1rem;}
+  .section-line{width:48px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;margin-bottom:3rem;}
+
+  /* ABOUT */
+  #about{background:var(--bg2);}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+  .about-text p{color:var(--text2);line-height:1.9;margin-bottom:1rem;}
+  .about-highlight{background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;padding:1.2rem 1.5rem;font-family:var(--mono);font-size:13px;color:var(--accent2);margin-top:1.5rem;}
+  .about-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;}
+  .about-info-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;}
+  .about-info-row:last-child{border-bottom:none;}
+  .about-info-row span:first-child{color:var(--text3);}
+  .about-info-row span:last-child{color:var(--text);font-weight:500;}
+
+  /* SKILLS */
+  .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
+  .skill-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;}
+  .skill-card-title{font-size:13px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem;}
+  .skill-tags{display:flex;flex-wrap:wrap;gap:8px;}
+  .tag{font-size:12px;font-family:var(--mono);background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:4px 10px;border-radius:6px;}
+  .tag.accent{background:rgba(108,99,255,0.12);border-color:rgba(108,99,255,0.3);color:#a8a3ff;}
+  .tag.green{background:rgba(0,212,170,0.1);border-color:rgba(0,212,170,0.25);color:#00d4aa;}
+  .tag.red{background:rgba(255,107,107,0.1);border-color:rgba(255,107,107,0.25);color:#ff8f8f;}
+
+  /* PROJECTS */
+  #projects{background:var(--bg2);}
+  .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.5rem;}
+  .project-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:border-color 0.25s,transform 0.25s;position:relative;overflow:hidden;}
+  .project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
+  .project-card:hover::before{transform:scaleX(1);}
+  .project-card:hover{border-color:rgba(108,99,255,0.4);transform:translateY(-3px);}
+  .project-num{font-family:var(--mono);font-size:12px;color:var(--text3);margin-bottom:1rem;}
+  .project-title{font-size:18px;font-weight:700;margin-bottom:0.5rem;letter-spacing:-0.01em;}
+  .project-tech{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1rem;}
+  .project-tech span{font-size:11px;font-family:var(--mono);background:rgba(108,99,255,0.1);border:1px solid rgba(108,99,255,0.2);color:#a8a3ff;padding:3px 8px;border-radius:4px;}
+  .project-desc{color:var(--text2);font-size:14px;line-height:1.7;margin-bottom:1.2rem;}
+  .project-highlights{list-style:none;padding:0;}
+  .project-highlights li{font-size:13px;color:var(--text2);padding:4px 0;padding-left:16px;position:relative;}
+  .project-highlights li::before{content:'▸';position:absolute;left:0;color:var(--accent2);font-size:11px;top:6px;}
+  .project-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(0,212,170,0.1);border:1px solid rgba(0,212,170,0.2);color:var(--accent2);font-size:12px;font-weight:600;padding:4px 10px;border-radius:6px;margin-top:1rem;}
+
+  /* CERTIFICATIONS */
+  .certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem;}
+  .cert-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;}
+  .cert-icon{width:40px;height:40px;border-radius:10px;background:rgba(108,99,255,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;}
+  .cert-title{font-size:15px;font-weight:600;margin-bottom:4px;}
+  .cert-issuer{font-size:13px;color:var(--accent2);}
+  .cert-desc{font-size:13px;color:var(--text2);margin-top:6px;line-height:1.6;}
+
+  /* CONTACT */
+  #contact{background:var(--bg2);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+  .contact-links{display:flex;flex-direction:column;gap:1rem;margin-top:2rem;}
+  .contact-link{display:flex;align-items:center;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem 1.2rem;text-decoration:none;color:var(--text);transition:border-color 0.2s;}
+  .contact-link:hover{border-color:var(--accent);}
+  .contact-link-icon{width:36px;height:36px;border-radius:8px;background:rgba(108,99,255,0.15);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+  .contact-link-text{font-size:14px;color:var(--text2);}
+  .contact-link-label{font-size:12px;color:var(--text3);}
+  .contact-form-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;}
+  .form-group{margin-bottom:1.2rem;}
+  .form-label{font-size:13px;color:var(--text3);margin-bottom:6px;display:block;}
+  .form-input{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font-family:var(--font);font-size:14px;outline:none;transition:border-color 0.2s;}
+  .form-input:focus{border-color:var(--accent);}
+  textarea.form-input{resize:vertical;min-height:100px;}
+  .btn-send{width:100%;background:var(--accent);color:#fff;border:none;padding:12px;border-radius:8px;font-family:var(--font);font-size:14px;font-weight:600;cursor:pointer;transition:opacity 0.2s;}
+  .btn-send:hover{opacity:0.85;}
+
+  /* FOOTER */
+  footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem;text-align:center;font-size:13px;color:var(--text3);}
+  footer span{color:var(--accent);}
+
+  /* EXPERIENCE */
+  .exp-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;position:relative;}
+  .exp-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--accent),var(--accent2));border-radius:2px;}
+  .exp-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.8rem;}
+  .exp-title{font-size:18px;font-weight:700;}
+  .exp-company{font-size:14px;color:var(--accent2);font-weight:500;margin-top:2px;}
+  .exp-date{font-family:var(--mono);font-size:12px;color:var(--text3);background:var(--bg3);padding:4px 10px;border-radius:6px;border:1px solid var(--border);}
+  .exp-list{list-style:none;margin-top:1rem;}
+  .exp-list li{font-size:14px;color:var(--text2);padding:5px 0 5px 18px;position:relative;}
+  .exp-list li::before{content:'◆';position:absolute;left:0;color:var(--accent);font-size:8px;top:9px;}
+
+  @media(max-width:768px){
+    .about-grid,.contact-grid{grid-template-columns:1fr;}
+    .hero-stats{flex-wrap:wrap;gap:1.5rem;}
+    nav .nav-links{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <span class="nav-logo">rr.dev</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-tag">Available for internship</div>
+    <h1 class="hero-name">Rajkumar<br/><span>Rathor</span></h1>
+    <p class="hero-role">Software Engineer · <b>ML & Web Dev</b></p>
+    <p class="hero-desc">Final-year B.Tech CSE student building intelligent systems and clean web interfaces. Passionate about machine learning, NLP, and writing code that solves real problems.</p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+      <a href="resume_rajkumar_SWE_intern.tex" class="btn-outline" download>Download Resume</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">350+</div>
+        <div class="stat-label">LeetCode Problems</div>
+      </div>
+      <div>
+        <div class="stat-num">2</div>
+        <div class="stat-label">ML Projects</div>
+      </div>
+      <div>
+        <div class="stat-num">96%+</div>
+        <div class="stat-label">Model Accuracy</div>
+      </div>
+      <div>
+        <div class="stat-num">2027</div>
+        <div class="stat-label">Graduating</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-tag">// about me</div>
+    <h2 class="section-title">Who I Am</h2>
+    <div class="section-line"></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a 7th-semester Computer Science student at Jaypee University of Engineering and Technology, Guna. I love building things — whether it's a machine learning model that predicts traffic flow or a clean, responsive web interface.</p>
+        <p>My journey started with C/C++ fundamentals and DSA, evolved through Python and ML, and now spans both data science and web development. I've solved 350+ problems on LeetCode which has sharpened my problem-solving mindset significantly.</p>
+        <p>I'm currently looking for a Software Engineer internship where I can contribute, learn fast, and grow alongside a great team.</p>
+        <div class="about-highlight">// currently seeking internship opportunities in ML · Web Dev · SWE</div>
+      </div>
+      <div class="about-card">
+        <div class="about-info-row"><span>Name</span><span>Rajkumar Rathor</span></div>
+        <div class="about-info-row"><span>Degree</span><span>B.Tech — CSE</span></div>
+        <div class="about-info-row"><span>University</span><span>JUET, Guna</span></div>
+        <div class="about-info-row"><span>Semester</span><span>7th (Final Year)</span></div>
+        <div class="about-info-row"><span>CGPA</span><span>6.33 / 10</span></div>
+        <div class="about-info-row"><span>Graduation</span><span>2027</span></div>
+        <div class="about-info-row"><span>LeetCode</span><span>350+ solved</span></div>
+        <div class="about-info-row"><span>Location</span><span>India</span></div>
+        <div class="about-info-row"><span>Email</span><span style="color:var(--accent);font-size:13px;">rajkumar.rathor.250925<br/>@gmail.com</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-tag">// technical skills</div>
+    <h2 class="section-title">What I Work With</h2>
+    <div class="section-line"></div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-card-title">Languages</div>
+        <div class="skill-tags">
+          <span class="tag accent">Python</span>
+          <span class="tag accent">JavaScript</span>
+          <span class="tag">C</span>
+          <span class="tag">C++</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-title">Machine Learning</div>
+        <div class="skill-tags">
+          <span class="tag green">Scikit-learn</span>
+          <span class="tag green">Random Forest</span>
+          <span class="tag green">SVM</span>
+          <span class="tag green">Naive Bayes</span>
+          <span class="tag green">LightGBM</span>
+          <span class="tag green">Logistic Regression</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-title">NLP & Data</div>
+        <div class="skill-tags">
+          <span class="tag accent">NLP</span>
+          <span class="tag accent">TF-IDF</span>
+          <span class="tag accent">Pandas</span>
+          <span class="tag accent">NumPy</span>
+          <span class="tag accent">Feature Engineering</span>
+          <span class="tag accent">Data Cleaning</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-title">Web Development</div>
+        <div class="skill-tags">
+          <span class="tag red">HTML</span>
+          <span class="tag red">CSS</span>
+          <span class="tag red">JavaScript</span>
+          <span class="tag red">Responsive Design</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-title">Tools & Platforms</div>
+        <div class="skill-tags">
+          <span class="tag">Git</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">Jupyter Notebook</span>
+          <span class="tag">Google Colab</span>
+          <span class="tag">VS Code</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-title">CS Fundamentals</div>
+        <div class="skill-tags">
+          <span class="tag">DSA</span>
+          <span class="tag">OOP</span>
+          <span class="tag">BFS / DFS</span>
+          <span class="tag">Graph Algorithms</span>
+          <span class="tag">350+ LeetCode</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-tag">// experience</div>
+    <h2 class="section-title">Work Experience</h2>
+    <div class="section-line"></div>
+    <div class="exp-card">
+      <div class="exp-header">
+        <div>
+          <div class="exp-title">Software Developer Intern — Python</div>
+          <div class="exp-company">CodeAlpha · Remote</div>
+        </div>
+        <div class="exp-date">Sep 2025 — Oct 2025</div>
+      </div>
+      <ul class="exp-list">
+        <li>Built 3+ Python applications using OOP principles, modular design, and file handling within a 1-month remote internship.</li>
+        <li>Automated repetitive data processing tasks using Python scripts, reducing manual effort by ~40%.</li>
+        <li>Improved software reliability through systematic debugging and adherence to clean-code best practices.</li>
+        <li>Strengthened problem-solving by implementing algorithms and data structures (lists, dictionaries, functions) in real projects.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-tag">// projects</div>
+    <h2 class="section-title">Things I've Built</h2>
+    <div class="section-line"></div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-num">01 / NLP · Machine Learning</div>
+        <div class="project-title">Email Spam Detection System</div>
+        <div class="project-tech">
+          <span>Python</span><span>NLP</span><span>Scikit-learn</span><span>TF-IDF</span><span>LightGBM</span>
+        </div>
+        <div class="project-desc">An NLP-powered email classifier that distinguishes spam from legitimate messages with high accuracy using multiple ML models.</div>
+        <ul class="project-highlights">
+          <li>Achieved 96%+ accuracy on 5,500+ labeled emails</li>
+          <li>Built full text pipeline — stopword removal, stemming, TF-IDF</li>
+          <li>Benchmarked 4 models: Logistic Regression, SVM, Naive Bayes, LightGBM</li>
+          <li>Reduced false positive rate by ~20% via precision/recall analysis</li>
+        </ul>
+        <div class="project-badge">✦ 96%+ Accuracy</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-num">02 / Regression · Machine Learning</div>
+        <div class="project-title">Traffic Flow Prediction System</div>
+        <div class="project-tech">
+          <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>Random Forest</span><span>Linear Regression</span>
+        </div>
+        <div class="project-desc">A supervised ML model that predicts city traffic patterns using historical data, enabling smarter real-time traffic decisions.</div>
+        <ul class="project-highlights">
+          <li>End-to-end preprocessing pipeline boosting accuracy by ~15%</li>
+          <li>Random Forest reduced RMSE by ~12% over Linear Regression baseline</li>
+          <li>Analyzed peak hours and traffic density for decision-making insights</li>
+          <li>Applied feature selection and normalization for robust model training</li>
+        </ul>
+        <div class="project-badge">✦ ~15% Accuracy Gain</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="container">
+    <div class="section-tag">// certifications</div>
+    <h2 class="section-title">Credentials</h2>
+    <div class="section-line"></div>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-icon">🐍</div>
+        <div>
+          <div class="cert-title">Python Programming</div>
+          <div class="cert-issuer">Infosys Springboard</div>
+          <div class="cert-desc">Core Python — OOP, file handling, loops, functions, and real-world problem solving.</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🔗</div>
+        <div>
+          <div class="cert-title">Graph Algorithms</div>
+          <div class="cert-issuer">AlgoUniversity</div>
+          <div class="cert-desc">Graph theory — BFS, DFS, shortest path algorithms, and advanced traversal techniques.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-tag">// contact</div>
+    <h2 class="section-title">Let's Connect</h2>
+    <div class="section-line"></div>
+    <div class="contact-grid">
+      <div>
+        <p style="color:var(--text2);margin-bottom:0.5rem;">I'm actively looking for internship opportunities. Whether you have a role, a project, or just want to talk tech — my inbox is open.</p>
+        <div class="contact-links">
+          <a href="mailto:rajkumar.rathor.250925@gmail.com" class="contact-link">
+            <div class="contact-link-icon">📧</div>
+            <div>
+              <div class="contact-link-text">rajkumar.rathor.250925@gmail.com</div>
+              <div class="contact-link-label">Email</div>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/rajkumar-rathor-4a2263307" target="_blank" class="contact-link">
+            <div class="contact-link-icon">💼</div>
+            <div>
+              <div class="contact-link-text">linkedin.com/in/rajkumar-rathor</div>
+              <div class="contact-link-label">LinkedIn</div>
+            </div>
+          </a>
+          <a href="https://github.com/WelRaj" target="_blank" class="contact-link">
+            <div class="contact-link-icon">🐙</div>
+            <div>
+              <div class="contact-link-text">github.com/WelRaj</div>
+              <div class="contact-link-label">GitHub</div>
+            </div>
+          </a>
+          <a href="https://leetcode.com/u/AlphaTech_255/" target="_blank" class="contact-link">
+            <div class="contact-link-icon">⚡</div>
+            <div>
+              <div class="contact-link-text">AlphaTech_255 · 350+ Problems</div>
+              <div class="contact-link-label">LeetCode</div>
+            </div>
+          </a>
+          <a href="+916263171958" class="contact-link">
+            <div class="contact-link-icon">📱</div>
+            <div>
+              <div class="contact-link-text">+91 6263171958</div>
+              <div class="contact-link-label">Phone</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form-card">
+        <p style="font-size:14px;color:var(--text3);margin-bottom:1.5rem;">Send a quick message</p>
+        <div class="form-group">
+          <label class="form-label">Your Name</label>
+          <input type="text" class="form-input" placeholder="John Doe"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Email</label>
+          <input type="email" class="form-input" placeholder="john@company.com"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-input" placeholder="Hi Rajkumar, I'd like to discuss an internship opportunity..."></textarea>
+        </div>
+        <button class="btn-send" onclick="alert('Thanks! Please email directly at rajkumar.rathor.250925@gmail.com')">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Designed & built by <span>Rajkumar Rathor</span> · B.Tech CSE · JUET Guna · 2027</p>
+  <p style="margin-top:6px;">Open to internships · <span>rajkumar.rathor.250925@gmail.com</span></p>
+</footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      e.preventDefault();
+      document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'});
+    });
+  });
+</script>
+</body>
+</html>
